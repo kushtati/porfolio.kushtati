@@ -26,7 +26,13 @@ const Projects: React.FC = () => {
             <div
               key={project.id}
               ref={projectRefs[index]}
-              onClick={() => window.open(project.demoUrl || project.repoUrl, '_blank')}
+              onClick={() => {
+                if (project.demoUrl) {
+                  window.open(project.demoUrl, '_blank', 'noopener,noreferrer');
+                } else {
+                  window.open(project.repoUrl, '_blank', 'noopener,noreferrer');
+                }
+              }}
               className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-white/5 hover:border-orange-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/30 hover:-translate-y-2 scroll-reveal-scale cursor-pointer"
             >
               {/* Image Preview */}
@@ -42,15 +48,25 @@ const Projects: React.FC = () => {
                 {/* Floating Action Buttons */}
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-10">
                   <button 
-                    onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.repoUrl, '_blank'); }}
+                    onClick={(e) => { 
+                      e.stopPropagation(); 
+                      window.open(project.repoUrl, '_blank', 'noopener,noreferrer'); 
+                      return false;
+                    }}
                     className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-colors border border-white/10"
+                    aria-label="Voir sur GitHub"
                   >
                     <Github className="w-5 h-5" />
                   </button>
                   {project.demoUrl && (
                     <button
-                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.demoUrl, '_blank'); }}
+                      onClick={(e) => { 
+                        e.stopPropagation(); 
+                        window.open(project.demoUrl, '_blank', 'noopener,noreferrer'); 
+                        return false;
+                      }}
                       className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-colors border border-white/10"
+                      aria-label="Voir la démo"
                     >
                       <ExternalLink className="w-5 h-5" />
                     </button>
