@@ -10,9 +10,9 @@ const Hero: React.FC = () => {
   return (
     <section id={SectionId.HERO} className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-slate-950">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950 pointer-events-none"></div>
-      <div className="container mx-auto max-w-7xl grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
+      <div className="container mx-auto max-w-7xl grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-30">
         
-        <div ref={contentRef} className="space-y-6 text-center scroll-reveal-left">
+        <div ref={contentRef} className="space-y-6 text-center">
           {/* Status Pill */}
           <div className="inline-flex items-center px-4 py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-md shadow-lg">
             <span className="flex h-2 w-2 relative mr-3">
@@ -22,14 +22,14 @@ const Hero: React.FC = () => {
             <span className="text-slate-200 text-xs font-medium tracking-wider uppercase">Disponible</span>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white w-full">
             Créativité <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-rose-500 to-purple-600 animate-gradient-x">
               & Intelligence
             </span>
           </h1>
           
-          <p className="text-sm sm:text-base md:text-lg text-slate-400 font-light max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-slate-400 font-light w-full leading-relaxed">
             Bonjour, je suis <strong className="text-white">{DEV_NAME}</strong>. {DEV_ROLE}, je crée des expériences digitales aussi naturelles qu'un coucher de soleil et aussi précises qu'une horloge.
           </p>
           
@@ -60,11 +60,15 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Visual Element */}
-        <div ref={imageRef} className="hidden md:flex justify-end relative scroll-reveal-right">
-          <div className="relative w-[400px] h-[500px]">
+        <div ref={imageRef} className="hidden md:flex justify-center items-center relative">
+          <div className="relative w-[400px] h-[400px] flex items-center justify-center">
             {/* Decorative Gradient Orb */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gradient-to-br from-orange-500/30 to-rose-500/30 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] border border-white/10 rounded-full animate-[spin_15s_linear_infinite]"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[300px] h-[300px] bg-gradient-to-br from-orange-500/30 to-rose-500/30 rounded-full blur-3xl"></div>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[200px] h-[200px] border border-white/10 rounded-full animate-[spin_15s_linear_infinite]"></div>
+            </div>
           </div>
         </div>
       </div>

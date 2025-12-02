@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     description: "Plateforme complète de gestion immobilière pour la Guinée avec dashboard propriétaires/locataires, génération de rapports PDF, chatbot IA et 6 méthodes de paiement.",
     techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Google AI"],
     repoUrl: "https://github.com/kushtati/kushtati-immo",
-    demoUrl: "https://kushtati-immo-lnvrrcgei-ibrahims-projects-5762209f.vercel.app",
+    demoUrl: "https://kushtati-immo.onrender.com",
     imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=800&fit=crop&q=80"
   },
   {

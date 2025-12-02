@@ -16,7 +16,7 @@ function App() {
         <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-rose-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-20">
         <Navbar />
         <main>
           <Hero />

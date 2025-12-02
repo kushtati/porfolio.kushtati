@@ -19,6 +19,13 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.text-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .animate-blob {
   animation: blob 7s infinite;
 }
