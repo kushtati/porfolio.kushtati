@@ -91,7 +91,7 @@ const About: React.FC = () => {
             </div>
 
             <a
-              href="/cv.ibrahim barry.pdf"
+              href="/CV-Ibrahim-Barry.pdf"
               download
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-semibold rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all duration-300 mt-6"
             >

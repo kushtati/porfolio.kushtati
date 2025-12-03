@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="/cv.ibrahim barry.pdf"
+            href="/CV-Ibrahim-Barry.pdf"
             download
             className="px-6 py-2.5 bg-white/5 border border-white/10 text-white rounded-full hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-sm font-medium backdrop-blur-md"
           >
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="/cv.ibrahim barry.pdf"
+            href="/CV-Ibrahim-Barry.pdf"
             download
             onClick={() => setIsMobileMenuOpen(false)}
             className="px-8 py-3 bg-gradient-to-r from-orange-500 to-rose-600 text-white rounded-full shadow-lg shadow-orange-500/20"
