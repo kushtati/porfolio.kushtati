@@ -23,7 +23,7 @@ export async function askAI(question: string): Promise<string> {
 
   try {
     const model = genAI.getGenerativeModel({ 
-      model: 'gemini-pro'
+      model: 'models/gemini-1.5-flash'
     });
 
     const prompt = `${CONTEXT}\n\nQuestion: ${question}\n\nRéponds brièvement sans Markdown:`;
