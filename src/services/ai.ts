@@ -17,18 +17,19 @@ CONTACT: ib362392@gmail.com | +224 623 93 63 13 | GitHub: github.com/kushtati
 RÈGLES: Réponds en 2-3 phrases max, sans Markdown, professionnellement. Si hors sujet, redirige vers le portfolio.`;
 
 export async function askAI(question: string): Promise<string> {
+  if (!API_KEY) {
+    return "Configuration manquante. Contactez Ibrahim à ib362392@gmail.com";
+  }
+
   try {
     const model = genAI.getGenerativeModel({ 
-      model: 'gemini-1.5-flash',
-      generationConfig: {
-        temperature: 0.7,
-        maxOutputTokens: 150,
-      }
+      model: 'gemini-pro'
     });
 
     const prompt = `${CONTEXT}\n\nQuestion: ${question}\n\nRéponds brièvement sans Markdown:`;
     const result = await model.generateContent(prompt);
-    const text = result.response.text();
+    const response = await result.response;
+    const text = response.text();
     
     // Nettoyage
     return text
