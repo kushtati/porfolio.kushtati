@@ -19,7 +19,7 @@ RÈGLES: Réponds en 2-3 phrases max, sans Markdown, professionnellement. Si hor
 export async function askAI(question: string): Promise<string> {
   try {
     const model = genAI.getGenerativeModel({ 
-      model: 'gemini-1.5-flash-latest',
+      model: 'gemini-1.5-flash',
       generationConfig: {
         temperature: 0.7,
         maxOutputTokens: 150,
