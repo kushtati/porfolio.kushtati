@@ -10,14 +10,11 @@ export const useScrollReveal = (threshold = 0.1) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          element.classList.remove('reveal-out');
           element.classList.add('reveal-active');
-        } else {
-          element.classList.remove('reveal-active');
-          element.classList.add('reveal-out');
+          observer.unobserve(element);
         }
       },
-      { threshold, rootMargin: '0px 0px -50px 0px' }
+      { threshold, rootMargin: '0px 0px -40px 0px' }
     );
 
     observer.observe(element);

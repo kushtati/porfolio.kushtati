@@ -1,6 +1,6 @@
 import { ArrowRight, Github, Mail } from 'lucide-react';
 import { SectionId } from '../types';
-import { DEV_NAME, DEV_ROLE, SOCIAL_LINKS } from '../constants';
+import { DEV_NAME, SOCIAL_LINKS } from '../constants';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Hero: React.FC = () => {
@@ -11,41 +11,45 @@ const Hero: React.FC = () => {
     <section id={SectionId.HERO} className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-slate-950">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950 pointer-events-none"></div>
       <div className="container mx-auto max-w-7xl grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-30">
-        
-        <div ref={contentRef} className="space-y-6 text-center">
+
+        <div ref={contentRef} className="space-y-6 text-center scroll-reveal">
           {/* Status Pill */}
           <div className="inline-flex items-center px-4 py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-md shadow-lg">
             <span className="flex h-2 w-2 relative mr-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="text-slate-200 text-xs font-medium tracking-wider uppercase">Disponible</span>
+            <span className="text-slate-200 text-xs font-medium tracking-wider uppercase">Available for work</span>
           </div>
-          
+
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white w-full">
-            Créativité <br />
+            Build fast. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-rose-500 to-purple-600 animate-gradient-x">
-              & Intelligence
+              Ship real.
             </span>
           </h1>
-          
+
           <p className="text-sm sm:text-base md:text-lg text-slate-400 font-light w-full leading-relaxed">
-            Bonjour, je suis <strong className="text-white">{DEV_NAME}</strong>. {DEV_ROLE}, je crée des expériences digitales aussi naturelles qu'un coucher de soleil et aussi précises qu'une horloge.
+            Hi, I'm <strong className="text-white">{DEV_NAME}</strong> — Full Stack Developer specializing in{' '}
+            <span className="text-orange-400">React</span>,{' '}
+            <span className="text-rose-400">TypeScript</span>, and{' '}
+            <span className="text-purple-400">Node.js</span>.
+            I build complete web apps, REST APIs, and AI-powered products.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2 w-full">
-            <a 
+            <a
               href={`#${SectionId.PROJECTS}`}
               className="group w-full sm:w-auto px-6 py-3 bg-white text-slate-900 rounded-full font-bold transition-all transform hover:scale-105 flex items-center justify-center shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.5)]"
             >
-              Voir mes projets
+              View my projects
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a 
+            <a
               href={`#${SectionId.CONTACT}`}
               className="w-full sm:w-auto px-6 py-3 glass text-white rounded-full font-medium transition-all hover:bg-white/10 hover:border-white/20 text-center"
             >
-              Discutons
+              Let's talk
             </a>
           </div>
 
@@ -60,9 +64,8 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Visual Element */}
-        <div ref={imageRef} className="hidden md:flex justify-center items-center relative">
+        <div ref={imageRef} className="hidden md:flex justify-center items-center relative scroll-reveal">
           <div className="relative w-[400px] h-[400px] flex items-center justify-center">
-            {/* Decorative Gradient Orb */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-[300px] h-[300px] bg-gradient-to-br from-orange-500/30 to-rose-500/30 rounded-full blur-3xl"></div>
             </div>

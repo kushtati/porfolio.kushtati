@@ -1,8 +1,8 @@
 import { Project, Skill } from "./types";
 
 export const DEV_NAME = "Ibrahim Barry";
-export const DEV_ROLE = "Développeur Web Full Stack junior";
-export const DEV_LOCATION = "Guinée";
+export const DEV_ROLE = "Full Stack Developer | React · TypeScript · Node.js · FastAPI";
+export const DEV_LOCATION = "Conakry, Guinée";
 export const DEV_EMAIL = "ib362392@gmail.com";
 export const DEV_PHONE = "+224 623 93 63 13";
 
@@ -12,50 +12,71 @@ export const SOCIAL_LINKS = {
 };
 
 export const SKILLS: Skill[] = [
-  { name: "HTML/CSS", level: 90, category: "Frontend" },
-  { name: "JavaScript", level: 85, category: "Frontend" },
-  { name: "React", level: 80, category: "Frontend" },
-  { name: "Vite", level: 85, category: "Frontend" },
-  { name: "Vue.js", level: 75, category: "Frontend" },
-  { name: "Bootstrap", level: 85, category: "Frontend" },
-  { name: "Tailwind CSS", level: 80, category: "Frontend" },
-  { name: "Node.js", level: 5, category: "Backend" },
-  { name: "Python", level: 10, category: "Backend" },
-  { name: "PHP", level: 5, category: "Backend" },
-  { name: "PostgreSQL", level: 70, category: "Backend" },
-  { name: "MongoDB", level: 5, category: "Backend" },
-  { name: "Git/GitHub", level: 90, category: "Outils" },
+  // Frontend
+  { name: "React.js", level: 85, category: "Frontend" },
+  { name: "TypeScript", level: 80, category: "Frontend" },
+  { name: "JavaScript (ES6+)", level: 85, category: "Frontend" },
+  { name: "Tailwind CSS", level: 82, category: "Frontend" },
+  { name: "HTML5 / CSS3", level: 90, category: "Frontend" },
+
+  // Backend
+  { name: "Node.js / Express", level: 75, category: "Backend" },
+  { name: "FastAPI (Python)", level: 72, category: "Backend" },
+  { name: "REST API", level: 80, category: "Backend" },
+  { name: "PostgreSQL", level: 75, category: "Backend" },
+  { name: "Prisma ORM", level: 70, category: "Backend" },
+
+  // DevOps & Outils
   { name: "Docker", level: 70, category: "Outils" },
-  { name: "VS Code", level: 95, category: "Outils" },
-  { name: "Figma", level: 75, category: "Outils" }
+  { name: "Git / GitHub", level: 90, category: "Outils" },
+  { name: "Figma", level: 75, category: "Outils" },
+  { name: "Linux / Unix", level: 65, category: "Outils" },
+
+  // IA
+  { name: "Google Gemini API", level: 70, category: "Intelligence Artificielle" },
+  { name: "OpenCV", level: 60, category: "Intelligence Artificielle" },
+  { name: "Tesseract OCR", level: 65, category: "Intelligence Artificielle" },
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: "1",
-    title: "Kushtati Immo",
-    description: "Plateforme complète de gestion immobilière pour la Guinée avec dashboard propriétaires/locataires, génération de rapports PDF, chatbot IA et 6 méthodes de paiement.",
+    title: "eTrans – Transit Management ERP",
+    description:
+      "Complete ERP for customs transit agencies: shipment tracking with 15 workflow stages, automated customs duty calculation (Guinea), PDF invoice generation with custom templates, JWT authentication with refresh tokens, AI assistant (Google Gemini), audit trail, and unit tests (Vitest). Built with React, TypeScript, Node.js, Prisma, and PostgreSQL.",
+    techStack: ["React", "TypeScript", "Node.js", "Prisma", "PostgreSQL", "Docker", "Google Gemini"],
+    repoUrl: "https://github.com/kushtati",
+    demoUrl: "https://github.com/kushtati",
+    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=800&fit=crop&q=80"
+  },
+  {
+    id: "2",
+    title: "Image Analysis REST API",
+    description:
+      "Full REST API for image analysis: object detection, facial recognition, multilingual OCR, explicit content detection, logo detection, and dynamic PDF overlay. Fully Dockerized with Swagger UI documentation.",
+    techStack: ["Python", "FastAPI", "OpenCV", "Tesseract", "Docker"],
+    repoUrl: "https://github.com/kushtati",
+    demoUrl: "https://github.com/kushtati",
+    imageUrl: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&h=800&fit=crop&q=80"
+  },
+  {
+    id: "3",
+    title: "Kushtati Immo – Real Estate Platform",
+    description:
+      "Full real estate management platform for Guinea: owner/tenant dashboards, property listings, PDF report generation, AI chatbot integration, and complete JWT authentication with role-based access control.",
     techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Google AI"],
     repoUrl: "https://github.com/kushtati/kushtati-immo",
     demoUrl: "https://kushtati-immo.onrender.com",
     imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=800&fit=crop&q=80"
   },
   {
-    id: "2",
+    id: "4",
     title: "Portfolio Personnel",
-    description: "Portfolio moderne et responsive avec animations fluides, scroll reveal bidirectionnel et design sunset gradient optimisé pour les performances.",
+    description:
+      "Modern responsive portfolio with smooth animations, bidirectional scroll reveal, and sunset gradient design optimized for performance.",
     techStack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     repoUrl: "https://github.com/kushtati/porfolio.kushtati",
     demoUrl: "https://porfolio-kushtati.onrender.com",
     imageUrl: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=800&fit=crop&q=80"
-  },
-  {
-    id: "3",
-    title: "Sentinelle RH",
-    description: "Application AI Studio pour la gestion des ressources humaines avec intelligence artificielle, tableaux de bord interactifs et analytics avancés.",
-    techStack: ["React", "Google AI", "Recharts", "Lucide React"],
-    repoUrl: "https://github.com/kushtati",
-    demoUrl: "https://sentinelle-lsuqzu2dy-ibrahims-projects-5762209f.vercel.app",
-    imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop&q=80"
   }
 ];

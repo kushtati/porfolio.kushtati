@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Mail, Phone, User } from 'lucide-react';
+import { MapPin, Mail, Phone, Download } from 'lucide-react';
 import { SectionId } from '../types';
 import { DEV_NAME, DEV_EMAIL, DEV_LOCATION, DEV_PHONE } from '../constants';
 import { useScrollReveal } from '../hooks/useScrollReveal';
@@ -15,8 +15,8 @@ const About: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950 pointer-events-none"></div>
       <div className="container mx-auto max-w-7xl relative z-10">
         <div ref={titleRef} className="text-center mb-20 scroll-reveal">
-          <span className="text-orange-400 font-medium tracking-wider text-sm uppercase mb-2 block">Qui suis-je ?</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">À propos de moi</h2>
+          <span className="text-orange-400 font-medium tracking-wider text-sm uppercase mb-2 block">Who am I?</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">About Me</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
@@ -41,26 +41,27 @@ const About: React.FC = () => {
           {/* Content */}
           <div ref={contentRef} className="space-y-6 scroll-reveal-right">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500">
-              Développeur Full Stack & Spécialiste en Intelligence Artificielle
+              Full Stack Developer & AI Integrations
             </h3>
-            
+
             <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
               <p>
-                Passionné par le développement web et l'intelligence artificielle, je crée des applications 
-                modernes qui allient <span className="text-orange-400 font-semibold">performance</span> et{' '}
-                <span className="text-rose-400 font-semibold">intelligence</span>. Je maîtrise aussi bien 
-                la création d'interfaces utilisateur attractives que le développement de fonctionnalités backend robustes.
+                I'm a self-taught Full Stack Developer with hands-on experience building{' '}
+                <span className="text-orange-400 font-semibold">complete web applications from scratch</span> — not just tutorials, but real products used by real people.
               </p>
-              
+
               <p>
-                Mon expertise en <span className="text-purple-400 font-semibold">Machine Learning</span> et{' '}
-                <span className="text-purple-400 font-semibold">Deep Learning</span> me permet d'intégrer des 
-                capacités d'analyse prédictive et d'automatisation intelligente dans mes projets.
+                My most significant project is <span className="text-rose-400 font-semibold">eTrans</span>, a complete transit management ERP I built for a logistics company: shipment tracking with 15 workflow stages, automated customs duty calculation, PDF invoice generation, JWT authentication, and{' '}
+                <span className="text-purple-400 font-semibold">Google Gemini AI assistant</span> integration.
               </p>
-              
+
               <p>
-                Toujours en apprentissage, je reste à l'affût des dernières innovations technologiques 
-                pour proposer des solutions modernes, efficaces et adaptées aux besoins actuels.
+                I also built a <span className="text-orange-400 font-semibold">REST API for image analysis</span> (face detection, OCR, explicit content detection) using FastAPI and Docker, and a real estate management platform with role-based dashboards.
+              </p>
+
+              <p>
+                What I bring to every project:{' '}
+                <span className="text-white font-semibold">clean code, real architecture decisions, and a developer who actually finishes what he starts.</span>
               </p>
             </div>
 
@@ -94,8 +95,8 @@ const About: React.FC = () => {
               download
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-semibold rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all duration-300 mt-6"
             >
-              <User className="w-5 h-5" />
-              Télécharger mon CV
+              <Download className="w-5 h-5" />
+              Download my CV
             </a>
           </div>
         </div>
