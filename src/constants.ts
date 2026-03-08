@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
       "Complete ERP for customs transit agencies: shipment tracking with 15 workflow stages, automated customs duty calculation (Guinea), PDF invoice generation with custom templates, JWT authentication with refresh tokens, AI assistant (Google Gemini), audit trail, and unit tests (Vitest). Built with React, TypeScript, Node.js, Prisma, and PostgreSQL.",
     techStack: ["React", "TypeScript", "Node.js", "Prisma", "PostgreSQL", "Docker", "Google Gemini"],
     repoUrl: "https://github.com/kushtati",
-    demoUrl: "https://github.com/kushtati",
+    demoUrl: "https://trans-delta-kohl.vercel.app/",
     imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=800&fit=crop&q=80"
   },
   {
