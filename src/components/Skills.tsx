@@ -9,7 +9,6 @@ const Skills: React.FC = () => {
     useScrollReveal(0.15),
     useScrollReveal(0.2),
     useScrollReveal(0.25),
-    useScrollReveal(0.3)
   ];
   
   const categories = Array.from(new Set(SKILLS.map(s => s.category)));
@@ -19,7 +18,6 @@ const Skills: React.FC = () => {
       case 'Frontend': return <Layout className="w-5 h-5" />;
       case 'Backend': return <Server className="w-5 h-5" />;
       case 'Outils': return <Terminal className="w-5 h-5" />;
-      case 'Intelligence Artificielle': return <Cpu className="w-5 h-5" />;
       default: return <Cpu className="w-5 h-5" />;
     }
   };

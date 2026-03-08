@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { MapPin, Mail, Phone, User } from 'lucide-react';
 import { SectionId } from '../types';
 import { DEV_NAME, DEV_EMAIL, DEV_LOCATION, DEV_PHONE } from '../constants';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const About: React.FC = () => {
+  const [imgError, setImgError] = useState(false);
   const titleRef = useScrollReveal();
   const imageRef = useScrollReveal(0.15);
   const contentRef = useScrollReveal(0.2);
@@ -22,19 +24,16 @@ const About: React.FC = () => {
           <div ref={imageRef} className="relative scroll-reveal-left">
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <div className="relative w-full h-full bg-gradient-to-br from-orange-500/20 to-rose-500/20 rounded-3xl p-2 border border-white/10">
-                <img
-                  src="/ib.png"
-                  alt={DEV_NAME}
-                  className="w-full h-full object-cover rounded-2xl"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    const parent = target.parentElement;
-                    if (parent) {
-                      parent.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-500 to-rose-500 rounded-2xl text-white text-6xl font-bold">IB</div>';
-                    }
-                  }}
-                />
+                {imgError ? (
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-500 to-rose-500 rounded-2xl text-white text-6xl font-bold">IB</div>
+                ) : (
+                  <img
+                    src="/ib.png"
+                    alt={DEV_NAME}
+                    className="w-full h-full object-cover rounded-2xl"
+                    onError={() => setImgError(true)}
+                  />
+                )}
               </div>
             </div>
           </div>
